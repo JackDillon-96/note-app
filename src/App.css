@@ -1,0 +1,56 @@
+h3 {
+  text-align: center;
+}
+
+html {
+  background-color: white;
+}
+
+.row-container {
+  align-items: center;
+  width: 75%;
+  display: flex;
+  padding-left: 12.5%;
+  padding-right: 7.5%;
+  flex-wrap: wrap;
+}
+
+.single-note {
+  align-items: center;
+  width: 40%;
+  margin-top: 35px;
+  margin-right: 45px;
+  margin-left: 25px;
+  padding: 25px;
+  border-style: solid;
+  border-radius: 5px;
+  border: none;
+  background-color: #488fb8;
+}
+
+.title-container {
+  margin-bottom: 25px;
+}
+
+.title {
+  width: 200px;
+  height: 25px;
+  display: block;
+  margin: auto;
+  background-color: rgb(221, 219, 219);
+  border: none;
+}
+
+.note {
+  width: 400px;
+  height: 100px;
+  display: block;
+  margin: auto;
+  background-color: rgb(221, 219, 219);
+  border: none;
+}
+
+.submit-btn {
+  display: block;
+  margin: auto;
+}
