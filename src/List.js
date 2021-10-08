@@ -13,7 +13,7 @@ const List = ({items, listItem, setListItem}) => {
                         newNoteTitle = {item.newNoteTitle}
                         setListItem = {setListItem}
                         listItem = {listItem}
-                        item = {item}
+                        item = {item} 
                     />
                 ))}
             </div>

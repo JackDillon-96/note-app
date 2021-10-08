@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import List from "./List";
-import Search from "./Search";
 import "./App.css"
+import { FaArrowRight } from "react-icons/fa";
 
 
 function App() {
@@ -13,7 +13,8 @@ function App() {
       event.preventDefault();
       const newItem = { 
         id: Math.floor(Math.random() * 1000), 
-        newNote: note, newNoteTitle: noteTitle};
+        newNote: note, 
+        newNoteTitle: noteTitle};
       setListItem([...listItem, newItem]);
       setNote("");
       setNoteTitle("");
@@ -34,7 +35,7 @@ function App() {
       <main> 
       <div className="main-container">
         <form onSubmit={handleSubmit}>
-          <h3>Notes App</h3>
+          <h3 className="app-title">Notes App</h3>
           <div className="title-container">
             <input 
               className="title"
@@ -44,19 +45,20 @@ function App() {
               onChange={(event) => setNoteTitle(event.target.value)}
             />
           </div>
-          <div className="note-container">
-            <input
-              className="note"
-              type="text"
-              placeholder="main text"
-              value={note}
-              onChange={(event) => setNote(event.target.value)}
-            />
-          </div>
-          <div className="submit-btn">
-            <button type="submit">
-              submit
-            </button>
+          <div className="inline-block">
+            <div className="note-container">
+              <input
+                className="note"
+                type="text"
+                placeholder="main text"
+                value={note}
+                onChange={(event) => setNote(event.target.value)}
+              />
+              <FaArrowRight 
+                className="submit-btn"
+                onClick={handleSubmit}
+              />
+            </div>
           </div>
         </form>
           <div>
@@ -73,26 +75,3 @@ function App() {
 
 export default App;
 
-// const [searchTerm, setSearchTerm] = useState("");
-// const [searchResults, setSearchResults] = useState([]);
-
-// useEffect(() => {
-//   const results = newNoteTitle.filter(item =>
-//   item.toLowerCase().includes(searchTerm)
-//   );
-//   setSearchResults(results);
-// }, [searchTerm]);
-
-{/* <div>
-<input
-  type="text"
-  placeholder="Search"
-  value={searchTerm}
-  onChange={(event) => setSearchTerm(event.target.value)}
-/>
- <ul>
-  {searchResults.map(item => (
-    <li>{item}</li>
-  ))}
- </ul>
-</div>  */}

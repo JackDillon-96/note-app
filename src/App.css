@@ -1,9 +1,19 @@
-h3 {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.app-title {
   text-align: center;
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+  font-family: "Open Sans";
 }
 
 html {
-  background-color: white;
+  background: linear-gradient(
+    90deg,
+    #2c3e50 0%,
+    #000000 100%
+  );
 }
 
 .row-container {
@@ -16,6 +26,7 @@ html {
 }
 
 .single-note {
+  color: white;
   align-items: center;
   width: 40%;
   margin-top: 35px;
@@ -25,11 +36,15 @@ html {
   border-style: solid;
   border-radius: 5px;
   border: none;
-  background-color: #488fb8;
+  background: linear-gradient(
+    90deg,
+    #04619f 0%,
+    #488fb8 100%
+  );
 }
 
 .title-container {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .title {
@@ -39,18 +54,61 @@ html {
   margin: auto;
   background-color: rgb(221, 219, 219);
   border: none;
+  font-family: "Open Sans";
+  padding-left: 10px;
+  border-radius: 3px;
+}
+
+
+.note-container {
+  border: 10px;
+  border-color: #04619f;
+}
+
+.inline-block {
+  text-align: center;
 }
 
 .note {
   width: 400px;
   height: 100px;
-  display: block;
-  margin: auto;
   background-color: rgb(221, 219, 219);
-  border: none;
-}
+  border: 10px;
+  border-color: #04619f;
+  font-family: "Open Sans";
+  padding-left: 10px;
+  border-radius: 5px;
+} 
 
 .submit-btn {
-  display: block;
-  margin: auto;
+  color: white;
+  padding-left: 10px;
+  width: 35px;
+  height: 100%;
+}
+
+.delete-btn :hover {
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: #C70F0F;
+  padding-left: 15px;
+  height: 20px;
+}
+
+.delete-btn :hover {
+  cursor: pointer;
+}
+
+.single-note-title {
+  padding-bottom: 2px;
+  font-size: 20px;
+  font-family: "Open Sans";
+  border-radius: 5px;
+}
+
+.single-note-note {
+  padding-bottom: 10px;
+  font-family: "Open Sans";
 }
